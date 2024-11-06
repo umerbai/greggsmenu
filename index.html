@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple UI/UX Design</title>
+    <style>
+        /* Reset default styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1em;
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 1em;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em;
+            transition: color 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #ff9800;
+        }
+
+        /* Hero section styling */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 3em 1em;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+
+        .cta-button {
+            background-color: #ff9800;
+            color: #fff;
+            padding: 0.7em 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e68900;
+        }
+
+        /* About section styling */
+        .about {
+            padding: 2em 1em;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .about h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        .about p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Main content section styling */
+        .content {
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        /* Card layout */
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5em;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 1.5em;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5em;
+            color: #ff9800;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* Testimonials section styling */
+        .testimonials {
+            padding: 2em 1em;
+            background-color: #e4f7ff;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5em;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            padding: 1em;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Gallery section styling */
+        .gallery {
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        .gallery h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1em;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* FAQs section styling */
+        .faqs {
+            padding: 2em 1em;
+            background-color: #f4f4f4;
+        }
+
+        .faqs h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+
+        .faq {
+            margin-bottom: 1em;
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq h3 {
+            margin-bottom: 0.5em;
+            color: #ff9800;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            margin-top: 2em;
+        }
+
+        .footer p {
+            font-size: 0.9em;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none; /* Hide navigation links in smaller screens */
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .card-container, .testimonial-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .faq {
+                padding: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Content here as you provided -->
+</body>
+</html>
